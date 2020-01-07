@@ -1,0 +1,5 @@
+FROM adoptopenjdk:11-jre-hotspot
+RUN mkdir /opt/shareclasses
+RUN mkdir /opt/app
+COPY demo.jar /opt/app
+CMD ["java", "-Xmx128m", "-jar", "/opt/app/demo.jar"]
